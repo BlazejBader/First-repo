@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+        gap: 20px;
+      }
+
+      .card1 {
+        background-color: red;
+      }
+      .card2 {
+        background-color: blue;
+      }
+      .card3 {
+        background-color: green;
+      }
+      .card4 {
+        background-color: yellow;
+      }
+      .card5 {
+        background-color: pink;
+      }
+      .card6 {
+        background-color: purple;
+      }
+      .card {
+        width: 200px;
+        height: 500px;
+      }
+      .card:hover{
+        transform: translate3d(0px, 0px, -10px);
+        transition: 0.1s;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.75);
+     
+      } 
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 500px;
+        /* align-items: center; */
+      }
+      
+    </style>
+  <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <video src="video/173530-849610807.mp4" width="400px" controls></video>
+    <div class="container">
+      <div class="card1 card"></div>
+      <div class="card2 card"></div>
+      <div class="card3 card"></div>
+      <div class="card4 card"></div>
+      <div class="card5 card"></div>
+      <div class="card6 card"></div>
+    </div> 
+  </body>
+</html>
