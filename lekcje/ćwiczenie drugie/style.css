@@ -19,9 +19,14 @@
 body {
   min-width: 320px;
   margin: 0 0;
-  font-weight: 500px;
+  font-weight: 500;
   color: var(--white);
   position: relative;
+}
+
+.toggleMenu {
+  width: 33px;
+  display: none;
 }
 
 a {
@@ -37,33 +42,39 @@ a {
   background-color: var(--darkNavy);
   display: flex;
   justify-content: center;
-  width: min(1980px, 100%);
-
 }
 
 .mainContainer5,
 .mainContainer8 {
   background-color: var(--darkGray);
-  width: min(1980px, 100%);
-
+  display: flex;
+  justify-content: center;
 }
 
-.mainContainer2>div {
+.mainContainer1> :first-child,
+.mainContainer2> :first-child,
+.mainContainer3> :first-child,
+.mainContainer4> :first-child,
+.mainContainer6> :first-child,
+.mainContainer7> :first-child,
+.mainContainer5> :first-child,
+.mainContainer8> :first-child {
   width: min(1980px, 100%);
-  padding: 96px 0;
+  padding: 0 5%;
 }
 
 .smallImage {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 0.8rem;
 }
 
 button {
   background-color: var(--buttonColor);
   color: var(--white);
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: 0.5rem;
   gap: 0.5rem;
 }
@@ -97,7 +108,6 @@ h1 {
   display: flex;
   align-items: center;
   gap: 4rem;
-  width: min(1980px, 100%);
 }
 
 .navBar {
@@ -128,23 +138,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-header>img {
-  height: 90%;
-  width: 40%;
+  padding: 6rem 0;
 }
 
 header>div {
   display: flex;
   flex-direction: column;
+  width: 45%;
   gap: 2rem;
-  width: 48%;
+}
+
+header>img {
+  width: 35%;
 }
 
 .logo>img,
 .logos>img {
-  height: 3rem;
+  height: 2.1rem;
 }
 
 .logosContainer {
@@ -166,7 +176,12 @@ header>div {
 }
 
 .socialMedia {
-  padding-bottom: 96px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 6rem;
+}
+
+.socialMedia>div {
   width: 80%;
 }
 
@@ -207,8 +222,10 @@ header>div {
 }
 
 .articles {
+  width: min(1980px, 100%);
   display: flex;
   flex-direction: column;
+
   gap: 4rem;
   padding-bottom: 96px;
 }
@@ -264,7 +281,8 @@ header>div {
 
 .rowDonors {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .cardWrapper {
@@ -444,7 +462,8 @@ img[src="images/Shape.png"] {
 }
 
 .form button {
-  width: fit-content;
+  /* width: fit-content; */
+  justify-content: center;
 }
 
 .form label {
@@ -485,4 +504,105 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .article>img,
+  .sponsors>p,
+  .nav,
+  .login {
+    display: none;
+  }
+
+  .toggleMenu {
+    display: block;
+  }
+
+  .toggleMenu img {
+    width: 33px;
+  }
+
+  .mainContainer1> :first-child {
+    justify-content: space-between;
+    padding-top: 1.5rem;
+  }
+
+  .mainContainer1> :first-child,
+  .mainContainer2> :first-child,
+  .mainContainer3> :first-child,
+  .mainContainer4> :first-child,
+  .mainContainer6> :first-child,
+  .mainContainer7> :first-child,
+  .mainContainer5> :first-child,
+  .mainContainer8> :first-child {
+    padding: 2rem 1rem;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  header>img,
+  header>div {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .buttonWrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .sponsors {
+    padding: 0;
+    border: none;
+  }
+
+  .wrapper,
+  .wrapperSocjal {
+    padding-bottom: 2rem;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .socialMedia>div {
+    width: 100%;
+  }
+
+  .rowDonors {
+    gap: 1rem;
+  }
+
+  .eventsWrapper {
+    flex-direction: column;
+  }
+
+  .event {
+    padding: 0.5rem;
+  }
+
+  .headingWrapper>.textBox,
+  .headingWrapper>.Title {
+    text-align: center;
+  }
+
+  .eventButtons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .linkWrapper {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }
