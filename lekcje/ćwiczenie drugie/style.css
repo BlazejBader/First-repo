@@ -60,7 +60,7 @@ a {
 .mainContainer5> :first-child,
 .mainContainer8> :first-child {
   width: min(1980px, 100%);
- padding-left: 5%;
+  padding-left: 5%;
   padding-right:5% ;
 }
 
@@ -149,10 +149,6 @@ header>div {
   gap: 2rem;
 }
 
-header>img {
-  width: 35%;
-}
-
 .logo>img,
 .logos>img {
   height: 2.1rem;
@@ -223,12 +219,10 @@ header>img {
 }
 
 .articles {
-  width: min(1980px, 100%);
   display: flex;
   flex-direction: column;
-
   gap: 4rem;
-  padding-bottom: 96px;
+  padding-bottom: 6rem;
 }
 
 .article {
@@ -265,7 +259,6 @@ header>img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* width: 50%; */
   gap: 1rem;
 }
 
@@ -396,19 +389,12 @@ img[src="images/Shape.png"] {
 .short {
   width: 50%;
 }
-
-/* .mainContainer7 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 96px 0;
-} */
-
 .mainContainer7>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 6rem;
   gap: 4rem;
 }
 
@@ -550,12 +536,15 @@ footer {
   .mainContainer8> :first-child {
     padding: 2rem 1rem;
   }
+  
+  .logosContainer{
+    gap:.1rem;
+  }
 
   header {
     flex-direction: column;
   }
 
-  header>img,
   header>div {
     width: 100%;
     gap: 1rem;
